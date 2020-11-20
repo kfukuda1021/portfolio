@@ -1,0 +1,83 @@
+/* *****************************************************
+column
+***************************************************** */
+
+*+.column {
+  margin-top: 20px;
+}
+
+.column {
+  @extend %clearfix;
+
+  &>div {
+    float: left;
+  }
+
+  .column__box {
+    margin-top: 10px;
+  }
+
+  .column__box+.column__box {
+    margin-left: 2%;
+  }
+
+  .col2 {
+    width: 49%;
+
+    &:nth-child(-n+2) {
+      margin-top: 0;
+    }
+
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
+  }
+
+  .col3 {
+    width: 32%;
+
+    &:nth-child(-n+3) {
+      margin-top: 0;
+    }
+
+    &:nth-child(3n+1) {
+      margin-left: 0;
+    }
+  }
+
+  .col4 {
+    width: 23.5%;
+
+    &:nth-child(-n+4) {
+      margin-top: 0;
+    }
+
+    &:nth-child(4n+1) {
+      margin-left: 0;
+    }
+  }
+
+  .col5 {
+    width: 18.4%;
+
+    &:nth-child(-n+5) {
+      margin-top: 0;
+    }
+
+    &:nth-child(5n+1) {
+      margin-left: 0;
+    }
+  }
+
+  .col6 {
+    width: 15%;
+
+    &:nth-child(-n+6) {
+      margin-top: 0;
+    }
+
+    &:nth-child(6n+1) {
+      margin-left: 0;
+    }
+  }
+}

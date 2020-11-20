@@ -1,0 +1,127 @@
+/* *****************************************************
+card
+***************************************************** */
+
+.card {
+  margin-bottom: 60px;
+  background: #fff;
+  border-radius: 12px;
+
+  .card__body {
+    padding: 40px;
+
+    @include sp {
+      padding: 20px;
+    }
+  }
+
+  .card__column {
+    display: flex;
+
+    @include sp {
+      display: block;
+    }
+
+    &+.card__column {
+      margin-top: 50px;
+    }
+  }
+
+  .card__column__main,
+  .card__column__item {
+    margin-right: 40px;
+
+    @include sp {
+      margin: 50px auto 0;
+    }
+  }
+
+  .card__column__main {
+    @include sp {
+      margin: 30px auto;
+    }
+  }
+
+  .card__name {
+    margin-top: 15px;
+    @include font-line(18);
+    font-weight: normal;
+
+    @include sp {
+      margin-top: 10px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  .card__column--wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+
+    @include sp {
+      justify-content: center;
+    }
+  }
+
+  .card__column__item {
+    width: 50%;
+
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  .card__img {
+    width: 160px;
+
+    @include sp {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+  .card__icon {
+    width: 64px;
+    margin: 12px;
+  }
+
+  h1 {
+    margin-top: 5px;
+    @include font-line(23);
+    letter-spacing: 0.05em;
+
+    @include sp {
+      @include font-line(22);
+    }
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    @include font-line(19);
+    letter-spacing: 0.05em;
+
+    @include sp {
+      margin-bottom: 20px;
+      @include font-line(25);
+      text-align: center;
+    }
+  }
+
+  .card__skill {
+    margin: 0 -2px;
+  }
+
+  .card__skill__item {
+    display: inline-block;
+    margin: 4px 2px;
+    padding: 3px 18px;
+    background: #e4e4e4;
+    border-radius: 5px;
+    @include font-line(13);
+  }
+
+  .fa {
+    color: #333;
+  }
+}

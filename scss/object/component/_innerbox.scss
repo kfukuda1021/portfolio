@@ -1,0 +1,157 @@
+/* *****************************************************
+inner box
+***************************************************** */
+
+.inner-box {
+  float: left;
+  display: block;
+  margin: 1%;
+  @include b-radius(6);
+  background: #fff;
+
+  @include sp {
+    margin: 2%;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.l-login .inner-box {
+  float: none;
+  width: 430px;
+  margin: 0 auto;
+  @include b-radius(4);
+}
+
+.inner-box__head {
+  padding: 17px 21px 14px;
+
+  @include sp {
+    padding: 10px 21px 10px;
+
+    h2 {
+      font-size: 130%;
+    }
+  }
+}
+
+.inner-box__body {
+  padding: 20px;
+
+  @include sp {
+    padding: 10px;
+
+    h3 {
+      font-size: 100%;
+      line-height: 130%;
+      margin-top: 5px;
+    }
+
+    p {
+      font-size: 80%;
+      margin-top: 10px;
+      line-height: 160%;
+    }
+  }
+
+  h3 {
+    a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.inner-box__body--top {
+  padding: 40px 60px;
+
+  @include sp {
+    padding: 15px;
+  }
+}
+
+// 160701 追加
+.inner-box__body--img {
+  padding: 0;
+
+  @include sp {
+    padding: 0 !important;
+
+    p {
+      margin-top: 0 !important;
+    }
+  }
+
+  img {
+    border-radius: 6px 6px 0 0;
+  }
+}
+
+.inner-box__bottom {
+  padding: 10px 20px;
+
+  @include sp {
+    p {
+      font-size: 60%;
+    }
+  }
+
+  h3,
+  .font-s {
+    a {
+      color: #888;
+      text-decoration: none;
+
+      &:hover {
+        color: #9E9E9E;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.padding-small {
+  padding: 16px 20px;
+}
+
+.inner-box__head+.inner-box__body,
+.inner-box__body+.inner-box__body,
+.inner-box__body+.inner-box__bottom,
+.inner-box__bottom+.inner-box__bottom {
+  border-top: 1px solid #eee;
+}
+
+a.inner-box {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a.inner-box:hover {
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.inner-box.grid1,
+.inner-box.grid2,
+.inner-box.grid3,
+.inner-box.grid4,
+.inner-box.grid5,
+.inner-box.grid6,
+.inner-box.grid7,
+.inner-box.grid8,
+.inner-box.grid9,
+.inner-box.grid10,
+.inner-box.grid11,
+.inner-box.grid12 {
+  @include sp {
+    width: 46%;
+  }
+}

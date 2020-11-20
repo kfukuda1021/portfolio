@@ -1,0 +1,29 @@
+/* *****************************************************
+table
+***************************************************** */
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 1px solid #e4e4e4;
+  border-left: 1px solid #e4e4e4;
+
+  thead th {
+    padding: 5px 0 3px;
+    // border-bottom: 2px solid #00a6a6;
+    background: #ebfad0;
+    text-align: center;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+  }
+
+  td {
+    padding: 4px 10px;
+    vertical-align: middle;
+  }
+}

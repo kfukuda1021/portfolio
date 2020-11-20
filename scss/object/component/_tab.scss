@@ -1,0 +1,68 @@
+/* *****************************************************
+tab
+***************************************************** */
+
+.tab__head {
+  @extend %clearfix;
+}
+
+.tab__head__item {
+  float: left;
+  display: table;
+  background: #f6f6f6;
+
+  &+.tab__head__item {
+    margin-left: 8px;
+  }
+
+  a {
+    display: table-cell;
+    padding: 2px 8px 0;
+    height: 25px;
+    background: #e5e5e5;
+    vertical-align: middle;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    @include font-line(12);
+    @include b-radius(3);
+
+    &:hover {
+      color: #fff;
+      background: #94dc16;
+    }
+  }
+
+  &.active {
+    position: relative;
+
+    a {
+      color: #fff;
+      background: #94dc16;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      left: 0;
+      width: 0;
+      margin: 0 auto;
+      border: 5px solid transparent;
+      border-top: 5px solid #94dc16;
+    }
+  }
+}
+
+.tab__content {
+  margin-top: 20px;
+
+  .tab__content__item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

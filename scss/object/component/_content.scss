@@ -1,0 +1,249 @@
+/* *****************************************************
+contents
+***************************************************** */
+
+/*
+l-body
+***************************************************** */
+.l-body {
+  position: relative;
+}
+
+.l-login .l-body {
+  padding-bottom: 53px;
+}
+
+.l-body__wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background: #e0e1e4;
+  z-index: 100;
+}
+
+/*
+l-contents
+***************************************************** */
+.l-contents {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 80px 40px;
+
+  @include sp {
+    min-width: 320px;
+    padding: 20px 0 40px;
+  }
+}
+
+.l-login .l-contents {
+  width: auto;
+  padding: 121px 0 40px;
+}
+
+/*
+l-contents__wrapper
+***************************************************** */
+.l-contents__body {
+  margin: -12px -12px 0 0;
+  padding: 0;
+  @extend %clearfix;
+
+  @include sp {
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
+.l-login .l-contents__body {
+  margin: 0 0 0 0;
+}
+
+.overlay,
+.overlay-sp {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 150;
+}
+
+.container {
+  margin: 0 -1%;
+
+  @include sp {
+    margin: 0 -2%;
+  }
+}
+
+.head__body {
+  position: relative;
+
+  h2 {
+    padding-right: 200px;
+  }
+
+  .calender {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+
+
+    &:before {
+      position: absolute;
+      top: 6px;
+      left: 17px;
+      display: inline-block;
+      width: 14px;
+      height: 15px;
+      z-index: 1;
+      @include font-line(15, 14, 0);
+      color: #999999;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      width: 0;
+      margin: 0;
+      border: 5px solid transparent;
+      border-top: 5px solid #7f7f7f;
+      z-index: 1;
+    }
+  }
+
+  .date {
+    position: relative;
+    width: 180px;
+    height: 29px;
+    padding: 0 24px 0 38px;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #a9a9a9;
+    @include font-line(14);
+    @include b-radius(4);
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+
+#container,
+.grid {
+  @include sp {
+    width: 100% !important;
+    margin-left: 0;
+  }
+}
+
+/*
+activity
+***************************************************** */
+.activity {
+  &+.activity {
+    border-top: 1px solid #eee;
+  }
+
+  h3 {
+    padding-top: 1px;
+
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 20px 12px;
+
+      &:hover {
+        background: #ebfad0;
+      }
+
+      span {
+        color: #333;
+      }
+    }
+
+    .is-active {
+      background: #ebfad0;
+    }
+
+    &:before {
+      color: $mainColor;
+      vertical-align: top;
+    }
+  }
+
+  .time:before {
+    margin-right: 7px;
+    @include font-line(19, 14, 0);
+  }
+
+  .height:before {
+    margin-right: 12px;
+    @include font-line(15, 14, 0);
+  }
+
+  .speed:before {
+    margin-right: 7px;
+    @include font-line(19, 14, 0);
+  }
+
+  .fa:before {
+    margin-right: 12px;
+    @include font-line(15, 14, 0);
+  }
+
+  .activity__num {
+    margin-top: 10px;
+
+    .text {
+      color: #999;
+      @include font-line(16);
+    }
+
+    .num {
+      color: #333;
+      @include font-line(44, 16, 0);
+    }
+
+    span+span {
+      margin-left: 5px;
+    }
+  }
+}
+
+// clearfix
+.clear {
+  @extend %clearfix;
+}
+
+/*
+l-container
+***************************************************** */
+.l-container {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
+.l-login .l-container {
+  background: #b7bab1;
+}
+
+/*
+parts
+***************************************************** */
+.loading-img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  padding: 51px;
+  border: 1px solid #ccc;
+}
+
+.caution {
+  color: #e5ac23;
+}

@@ -1,0 +1,284 @@
+/* *****************************************************
+box
+***************************************************** */
+
+//float
+@mixin float_unit($float) {
+  .#{$float} {
+    float: $float;
+  }
+}
+
+//text-align
+@mixin align_unit($align) {
+  .l-container .set-#{$align} {
+    text-align: $align;
+  }
+}
+
+.l-container .float-none {
+  float: none;
+}
+
+//vertical-align
+@mixin vertical_unit($vertical) {
+  .l-container .v-#{$vertical} {
+    vertical-align: $vertical;
+  }
+}
+
+/* float
+----------------------------------------------------- */
+@include float_unit(left);
+@include float_unit(right);
+
+/* text-align
+----------------------------------------------------- */
+@include align_unit(center);
+@include align_unit(left);
+@include align_unit(right);
+
+/* vertical-align
+----------------------------------------------------- */
+@include vertical_unit(top);
+@include vertical_unit(bottom);
+@include vertical_unit(middle);
+
+/* font-size
+----------------------------------------------------- */
+@for $i from 10 through 25 {
+  .l-container .font#{$i} {
+    @include font-line($i);
+  }
+}
+
+// @media #{$mediaWidth} {
+// @for $i from 10 through 25 {
+//   .font#{$i} {
+//     @include font-line-sp($i);
+//   }
+// }
+// }
+// /* text-indent
+// ----------------------------------------------------- */
+// @for $i from 1 through 70 {
+//   .indent#{$i} {
+//     text-indent: (-$i + px);
+//     padding-left: ($i + px);
+//   }
+// }
+
+// @media #{$mediaWidth} {
+//   @for $i from 1 through 70 {
+//     .indent#{$i}-sp {
+//       text-indent: (-$i + px);
+//       padding-left: ($i + px);
+//     }
+//   }
+// }
+
+// /* border-radius
+// ----------------------------------------------------- */
+// .radius-b {
+//   -webkit-border-radius: 0 0 5px 5px;
+//   -moz-border-radius: 0 0 5px 5px;
+//   -ms-border-radius: 0 0 5px 5px;
+//   border-radius: 0 0 5px 5px;
+// }
+// @for $i from 1 through 10 {
+//   .radius#{$i} {
+//     @include b-radius($i);
+//   }
+// }
+
+/* margin
+----------------------------------------------------- */
+.l-container .m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* top */
+@for $i from 0 through 20 {
+  .l-container .m-t#{$i * 5} {
+    @if $i==0 {
+      margin-top: ($i * 5);
+    }
+
+    @else {
+      margin-top: ($i * 5) + px;
+    }
+  }
+}
+
+// /* top */
+// @for $i from 0 through 20 {
+//   .m-up#{$i * 5} {
+//     @if $i == 0 {
+//       margin-top: -($i * 5);
+//     } @else {
+//       margin-top: -($i * 5) + px;
+//     }
+//   }
+// }
+
+/* right */
+@for $i from 0 through 20 {
+  .l-container .m-r#{$i * 5} {
+    @if $i==0 {
+      margin-right: ($i * 5);
+    }
+
+    @else {
+      margin-right: ($i * 5) + px;
+    }
+  }
+}
+
+
+/* bottom */
+@for $i from 0 through 20 {
+  .l-container .m-b#{$i * 5} {
+    @if $i==0 {
+      margin-bottom: ($i * 5);
+    }
+
+    @else {
+      margin-bottom: ($i * 5) + px;
+    }
+  }
+}
+
+
+/* left */
+@for $i from 0 through 20 {
+  .l-container .m-l#{$i * 5} {
+    @if $i==0 {
+      margin-left: ($i * 5);
+    }
+
+    @else {
+      margin-left: ($i * 5) + px;
+    }
+  }
+}
+
+/* padding
+----------------------------------------------------- */
+/* top */
+@for $i from 0 through 20 {
+  .l-container .p-t#{$i * 5} {
+    @if $i==0 {
+      padding-top: ($i * 5);
+    }
+
+    @else {
+      padding-top: ($i * 5) + px;
+    }
+  }
+}
+
+/* right */
+@for $i from 0 through 20 {
+  .l-container .p-r#{$i * 5} {
+    @if $i==0 {
+      padding-right: ($i * 5);
+    }
+
+    @else {
+      padding-right: ($i * 5) + px;
+    }
+  }
+}
+
+
+/* bottom */
+@for $i from 0 through 20 {
+  .l-container .p-b#{$i * 5} {
+    @if $i==0 {
+      padding-bottom: ($i * 5);
+    }
+
+    @else {
+      padding-bottom: ($i * 5) + px;
+    }
+  }
+}
+
+
+/* left */
+@for $i from 0 through 20 {
+  .l-container .p-l#{$i * 5} {
+    @if $i==0 {
+      padding-left: ($i * 5);
+    }
+
+    @else {
+      padding-left: ($i * 5) + px;
+    }
+  }
+}
+
+
+/* width
+----------------------------------------------------- */
+@for $i from 0 through 180 {
+  .l-container .w#{$i * 5} {
+    @if $i==0 {
+      width: ($i * 5);
+    }
+
+    @else {
+      width: ($i * 5) + px;
+    }
+  }
+}
+
+/* width(%)
+----------------------------------------------------- */
+@for $i from 0 through 20 {
+  .l-container .w-#{$i * 5}p {
+    @if $i==0 {
+      width: ($i * 5%);
+    }
+
+    @else {
+      width: ($i * 5%);
+    }
+  }
+}
+
+
+// .w-100p {
+//   width: 100%;
+// }
+
+/* height
+----------------------------------------------------- */
+@for $i from 0 through 150 {
+  .h#{$i * 5} {
+    @if $i==0 {
+      height: ($i * 5);
+    }
+
+    @else {
+      height: ($i * 5) + px;
+    }
+  }
+}
+
+@for $i from 0 through 150 {
+  .mh#{$i * 5} {
+    @if $i==0 {
+      min-height: ($i * 5);
+    }
+
+    @else {
+      min-height: ($i * 5) + px;
+    }
+  }
+}
+
+.h-auto {
+  height: auto !important;
+}

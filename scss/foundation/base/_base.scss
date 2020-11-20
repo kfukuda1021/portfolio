@@ -1,0 +1,160 @@
+/* *****************************************************
+base
+***************************************************** */
+body {
+  color: #222;
+  background-color: #fff;
+  font-size: $basefont; // 14px
+  line-height: $baseline; // 21px
+  font-family: $font_family;
+
+  @include sp {
+    min-width: 320px;
+  }
+}
+
+body.l-login {
+  min-width: 1340px;
+  height: 100%;
+}
+
+body.drawer-open {
+  width: 100%;
+  overflow-x: hidden;
+
+  .l-footer {
+    z-index: 10;
+  }
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  color: #0c7abb;
+  text-decoration: underline;
+  background: transparent;
+  outline: none;
+  vertical-align: baseline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+}
+
+em {
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: 220%;
+  line-height: 150%;
+  margin: 0 0 20px;
+  letter-spacing: 0.1em;
+
+  @include sp {
+    margin: 20px 0 40px;
+  }
+}
+
+/*
+p
+***************************************************** */
+*+p {
+  margin-top: 15px;
+}
+
+h3+p {
+  margin-top: 6px;
+}
+
+/*
+strong
+***************************************************** */
+strong {
+  @include font-line(16);
+}
+
+/*
+em
+***************************************************** */
+.em {
+  font-weight: bold;
+}
+
+.em-red {
+  color: #d23b3b;
+}
+
+//clearfix
+%clearfix {
+  *zoom: 1;
+
+  &:before {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//ellipsis
+%ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
+//hidetext
+%hidetext {
+  overflow: hidden;
+  text-indent: -9999px;
+  white-space: nowrap;
+}
+
+//margin 0, padding 0
+%mapa0 {
+  margin: 0;
+  padding: 0;
+}

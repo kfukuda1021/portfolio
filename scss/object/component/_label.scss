@@ -1,0 +1,15 @@
+/* *****************************************************
+label
+***************************************************** */
+
+.label {
+  background: #575a66;
+  padding: 4px 6px;
+  @include font-line(11);
+  @include b-radius(2);
+  color: #fff;
+}
+
+.label+.label {
+  margin-left: 4px;
+}

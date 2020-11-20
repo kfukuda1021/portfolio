@@ -1,0 +1,35 @@
+/* *****************************************************
+list
+***************************************************** */
+
+*+ul {
+  margin-top: 15px;
+}
+
+ul {
+  li {
+    @include font-line(14, 14, 7);
+  }
+
+  li:before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-top: -2px;
+    margin-right: 8px;
+    background: #95dd17;
+    @include font-line(14, 14, 0);
+    vertical-align: middle;
+    @include b-radius(4);
+  }
+
+  ul {
+    margin: 3px 0 2px;
+  }
+
+  ul>li {
+    padding-left: 18px;
+  }
+
+}

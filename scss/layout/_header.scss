@@ -1,0 +1,83 @@
+/* *****************************************************
+l-header
+***************************************************** */
+.l-header {
+  position: relative;
+  border-top: 5px solid #222;
+  background: #fff;
+  z-index: 200;
+
+  @include sp {
+    border-top: none;
+    width: 100%;
+    top: 0;
+    transition: all .3s;
+  }
+}
+
+.l-header__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 0 80px;
+  z-index: 2;
+  @extend %clearfix;
+
+  @include sp {
+    padding: 0 20px;
+  }
+}
+
+.l-header__logo {
+  display: table-cell;
+  height: 72px;
+  vertical-align: middle;
+
+  @include sp {
+    height: 61px;
+  }
+
+  .logo {
+    @include sp {
+      padding-top: 15px;
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+}
+
+.logo__link {
+  text-decoration: none;
+  color: #222;
+  @include font-line(32, 14, 0);
+  letter-spacing: 4px;
+  font-weight: 900;
+
+  &:visited,
+  &:hover {
+    color: #222;
+  }
+}
+
+.logo__img {
+  @include sp {
+    width: 80%;
+  }
+}
+
+.l-header__right {
+  margin-left: auto;
+}
+
+.l-header__logo,
+.l-header__left {
+  @include sp {
+    display: block;
+    float: none;
+  }
+}
+
+.shadow {
+  box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.4);
+}

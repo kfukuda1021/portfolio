@@ -1,0 +1,366 @@
+/* *****************************************************
+form
+***************************************************** */
+
+input,
+textarea,
+select {
+  vertical-align: middle;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  box-sizing: border-box;
+  @include font-line(14);
+}
+
+input[type="text"],
+input[type="password"] {
+  height: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid #c0c0c0;
+  @include b-radius(3);
+}
+
+label {
+  vertical-align: middle;
+}
+
+.login {
+  position: relative;
+  width: 290px;
+
+  span,
+  input {
+    width: 290px;
+    color: #b6b6b6;
+  }
+
+  span {
+    display: inline-block;
+    @include font-line(14, 14, 6);
+
+    &:before {
+      display: inline-block;
+      color: #d3d3d3;
+      vertical-align: middle;
+      @include font-line(18, 14, 0);
+    }
+  }
+
+  &+.login {
+    margin-top: 12px;
+  }
+}
+
+.login-id {
+  padding-top: 2px;
+}
+
+.login-password {
+  padding-top: 3px;
+}
+
+.login-id span:before {
+  padding: 9px 13px 11px 10px;
+}
+
+.login-password span:before {
+  padding: 9px 12px 11px;
+}
+
+.login input {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.login .onfocus {
+  background: #fff;
+}
+
+.check {
+  margin-top: 9px;
+  margin-bottom: 18px;
+}
+
+
+// /*
+// field
+// ***************************************************** */
+// .field {
+//   display: table;
+//   width: 100%;
+//   padding: 0 18px;
+//   @include box();
+
+//   & + .field {
+//     margin-top: 7px;
+//     padding-top: 7px;
+//     border-top: 1px dotted #ccc;
+//   }
+
+//   .label-required {
+//     margin-left: 10px;
+//   }
+
+//   .caution {
+//     margin-left: 13px;
+//   }
+// }
+
+// .field {
+//   .field__title,
+//   .field__input {
+//     display: table-cell;
+//     vertical-align: middle;
+//   }
+// }
+
+// .field__title,
+// .field__input {
+//   display: block;
+// }
+
+// .field__title {
+//   width: 320px;
+// }
+
+
+/*
+l-contents__select
+***************************************************** */
+.l-contents__select {
+  margin: 18px 0 9px;
+
+  .selectArea {
+    display: table;
+
+    select {
+      background: #49525a;
+    }
+
+    option {
+      color: #fff;
+      background: #49525a;
+    }
+  }
+
+  .selectArea__text {
+    display: table-cell;
+    height: 36px;
+    padding: 0 36px 0 26px;
+    @include font-line(16, 14, 6);
+    color: #fff;
+    line-height: 100%;
+    text-align: center;
+    border: 1px solid #fff;
+    vertical-align: middle;
+
+    &:after {
+      top: 15px;
+      right: 17px;
+      border: 5px solid transparent;
+      border-top: 5px solid #fff;
+    }
+  }
+}
+
+.selectArea {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+
+
+  select {
+    position: absolute;
+    zoom: 1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px none;
+    cursor: pointer;
+    background: #fff;
+  }
+
+  option {
+    color: #333;
+    background: #fff;
+  }
+}
+
+.selectArea__text {
+  display: block;
+  width: auto;
+  height: 29px;
+  padding: 7px 30px 0 10px;
+  color: #333;
+  line-height: 100%;
+  border: 1px solid #a9a9a9;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+  @include b-radius(3);
+  @include box();
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    width: 0;
+    margin: 0;
+    border: 5px solid transparent;
+    border-top: 5px solid #7f7f7f;
+  }
+}
+
+/*
+checkbox, radio
+***************************************************** */
+input[type=checkbox]:checked+.checkBtn:before,
+input[type=radio]:checked+.radioBtn:before {
+  opacity: 1;
+}
+
+// input[type=checkbox],
+// input[type=radio] {
+//   // display: none;
+// }
+
+.checkBtn,
+.radioBtn {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 16px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.checkBtn__text,
+.radioBtn__text {
+  padding: 0 0 0 23px;
+}
+
+input[type=checkbox]+.checkBtn,
+input[type=radio]+.radioBtn {
+  margin: 0 0 0 17px;
+}
+
+input[type=checkbox]:first-child+.checkBtn,
+input[type=radio]:first-child+.radioBtn {
+  margin: 0 0 0 0;
+}
+
+.checkBtn:before,
+.radioBtn:before {
+  position: absolute;
+  top: 50%;
+  display: block;
+  content: '';
+  opacity: 0;
+}
+
+.checkBtn:after,
+.radioBtn:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  border: 1px solid #c0c0c0;
+  content: '';
+}
+
+/* checkBtn */
+.checkBtn:before {
+  left: 2px;
+  margin-top: -6px;
+  width: auto;
+  height: auto;
+  color: $mainColor;
+  @include font-line(11);
+
+}
+
+.checkBtn:after {
+  margin-top: -10px;
+  width: 18px;
+  height: 18px;
+  @include b-radius(3);
+  @include box();
+}
+
+/* radioBtn */
+.radioBtn:before {
+  left: 4px;
+  margin-top: -5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $mainColor;
+}
+
+.radioBtn:after {
+  margin-top: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 16px;
+  @include box();
+}
+
+
+/*
+errorMessage
+***************************************************** */
+.errorMessage {
+  position: relative;
+
+  input {
+    background: #fff3f3;
+    border-color: #d23b3b;
+  }
+}
+
+.errorMessage__content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -68px;
+  height: 19px;
+  z-index: 10;
+  margin: auto 0;
+  padding: 1px 6px 0;
+  white-space: nowrap;
+  color: #fff;
+  @include font-line(11);
+  background-color: #d23b3b;
+  border-radius: 3px;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: -8px;
+    left: auto;
+    border-left: 8px solid #d23b3b;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-right: none;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    top: -10px;
+    left: 0;
+  }
+}

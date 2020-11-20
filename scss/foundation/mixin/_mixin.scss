@@ -1,0 +1,55 @@
+//*****************************************************
+// mixin
+//*****************************************************
+
+//inline-block
+@mixin inb {
+  letter-spacing: -.35em;
+}
+
+@mixin inb-c {
+  display: inline-block;
+  letter-spacing: normal;
+}
+
+//opacity
+@mixin opa($opa) {
+  opacity: $opa;
+}
+
+//border-radius
+@mixin b-radius($size) {
+  border-radius: $size + px;
+}
+
+//box-sizing
+@mixin box($type: border-box) {
+  box-sizing: $type;
+}
+
+//font-size
+@mixin font-line($fontSize, $baseFontSize:$basefontSize, $baseLineHeight:7) {
+  font-size: ceil($fontSize / $baseFontSize * 100%);
+  line-height: ceil((($fontSize+$baseLineHeight) / $fontSize)* 100%);
+}
+
+// /*
+// Media Queries
+// --------------------------- */
+@mixin pc {
+  @media screen and (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (min-width: ($tab_min)) and (max-width: ($tab_max)) {
+    @content;
+  }
+}
